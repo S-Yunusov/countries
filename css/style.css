@@ -1,7 +1,55 @@
+:root{
+  --text-color-light: #111517;
+  --text-color-dark: #fff;
+  --bg-color-light: #fafafa;
+  --bg-color-dark: #202c36;
+  
+}
+
+
+
+
+/* FONTS */
+@font-face {
+  font-family: 'Nunito Sans 7pt Condensed';
+  src: url(../fonts/NunitoSans7ptCondensed-ExtraBold.woff2) format('woff2'),
+      url(../fonts/NunitoSans7ptCondensed-ExtraBold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt Condensed';
+  src: url(../fonts/NunitoSans7ptCondensed-SemiBold.woff2) format('woff2'),
+      url(../fonts/NunitoSans7ptCondensed-SemiBold.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt Condensed';
+  src: url(../fonts/NunitoSans7ptCondensed-Regular.woff2) format('woff2'),
+      url(../fonts/NunitoSans7ptCondensed-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Sans 7pt Condensed';
+  src: url(../fonts/NunitoSans7ptCondensed-Light.woff2) format('woff2'),
+      url(../fonts/NunitoSans7ptCondensed-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
 /* GLOBAL */
-:root{}
-
-
 html{
   box-sizing: border-box;
   height: 100%;
@@ -36,9 +84,9 @@ img{
 /* CONTAINER */
 .container{
   width: 100%;
-  width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 1400px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
