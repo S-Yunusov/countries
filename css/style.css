@@ -1,52 +1,49 @@
+/* CUSTOM PROPS */
 :root{
-  --text-color-light: #111517;
-  --text-color-dark: #fff;
-  --bg-color-light: #fafafa;
-  --bg-color-dark: #202c36;
+  --body-bg: #fafafa;
+  --element-bg: #fff;
+  --text-color: #111517;
   
 }
 
 
 
-
 /* FONTS */
 @font-face {
-  font-family: 'Nunito Sans 7pt Condensed';
+  font-family: 'Nunito Sans';
   src: url(../fonts/NunitoSans7ptCondensed-ExtraBold.woff2) format('woff2'),
-      url(../fonts/NunitoSans7ptCondensed-ExtraBold.woff) format('woff');
+  url(../fonts/NunitoSans7ptCondensed-ExtraBold.woff) format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nunito Sans 7pt Condensed';
+  font-family: 'Nunito Sans';
   src: url(../fonts/NunitoSans7ptCondensed-SemiBold.woff2) format('woff2'),
-      url(../fonts/NunitoSans7ptCondensed-SemiBold.woff) format('woff');
+  url(../fonts/NunitoSans7ptCondensed-SemiBold.woff) format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nunito Sans 7pt Condensed';
+  font-family: 'Nunito Sans';
   src: url(../fonts/NunitoSans7ptCondensed-Regular.woff2) format('woff2'),
-      url(../fonts/NunitoSans7ptCondensed-Regular.woff) format('woff');
+  url(../fonts/NunitoSans7ptCondensed-Regular.woff) format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nunito Sans 7pt Condensed';
+  font-family: 'Nunito Sans';
   src: url(../fonts/NunitoSans7ptCondensed-Light.woff2) format('woff2'),
-      url(../fonts/NunitoSans7ptCondensed-Light.woff) format('woff');
+  url(../fonts/NunitoSans7ptCondensed-Light.woff) format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
-
 
 
 /* GLOBAL */
@@ -68,11 +65,13 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-family: "Nunito Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  transition: background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 img{
@@ -80,11 +79,26 @@ img{
   height: auto;
 }
 
+a{
+  text-decoration: none;
+}
+
+*:focus{
+  outline: 2px dashed var(--dark) ;
+  outline-offset: 2px;
+}
+
+/* DARK-MODE */
+.dark-mode{
+  --body-bg: #202c36;
+  --element-bg: #2b3844;
+  --text-color: #fafafa;
+}
 
 /* CONTAINER */
 .container{
   width: 100%;
-  width: 1400px;
+  width: 1320px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -95,4 +109,56 @@ img{
 /* MAIN-CONTENT */
 .main-content{
   flex-grow: 1;
+}
+
+
+/* SITE-HEADER */
+.site-header {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  background-color: var(--element-bg);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+
+}
+.site-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header-logo {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--text-color);
+}
+.site-header-logo:hover{
+  opacity: 0.8;
+}
+.site-header-logo:active{
+  opacity: 0.6;
+}
+
+.site-header-theme-toggler {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.site-header-theme-toggler:hover{
+  opacity: 0.8;
+}
+.site-header-theme-toggler:active{
+  opacity: 0.6;
+}
+.site-header-theme-toggler-inner {
+  display: flex;
+  align-items: center;
+}
+.site-header-theme-toggler-text {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--text-color);
 }
